@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/borde1">
+
+
+    <RelativeLayout
+        android:id="@+id/layoutOrder"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="3dp"
+        android:background="@color/white">
+
+
+        <ImageView
+            android:id="@+id/barraLateralRoja"
+            android:layout_width="3dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="0dp"
+            android:contentDescription="@string/app_name"
+            android:src="@color/colorseleccionado" />
+
+
+        <TextView
+            android:id="@+id/nameCliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="4dp"
+            android:text="Nombre de Cliente  /  "
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tlfCliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="4dp"
+            android:layout_toEndOf="@+id/nameCliente"
+            android:text="Telefono Cliente"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/ShippingOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_below="@id/nameCliente"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/titleShippingLabel"
+            android:textColor="@color/colortextdark"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/idCodigo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/ShippingOrder"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="4dp"
+            android:layout_toEndOf="@+id/ShippingOrder"
+            android:text="AAA-ASDSDF234"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/DateOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_below="@id/ShippingOrder"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/titleCreatedLabel"
+            android:textColor="@color/colortextdark"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/idRestaurante"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/DateOrder"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="4dp"
+            android:layout_toEndOf="@+id/DateOrder"
+            android:text="REST-123SDFS"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/fechaDelivery"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="20dp"
+            android:text="@string/hora_pickup"
+            android:layout_toEndOf="@+id/idCodigo"
+            android:layout_below="@+id/nameCliente"
+            android:textColor="@color/colortextdark"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/detailsOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_toEndOf="@+id/idRestaurante"
+            android:layout_below="@+id/fechaDelivery"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/detailsLabel"
+            android:textColor="@color/colortextdark"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/horaPickup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/fechaDelivery"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="50dp"
+            android:layout_toEndOf="@+id/fechaDelivery"
+            android:text="2019-10-18 10:00:00"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="15sp" />
+
+
+        <TextView
+            android:id="@+id/estdoOrden"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/detailsOrder"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="25dp"
+            android:layout_toEndOf="@+id/detailsOrder"
+            android:text="Rechazado"
+            android:textColor="@color/warning"
+            android:textSize="15sp"
+            android:textStyle="italic|bold" />
+
+        <ImageView
+            android:id="@+id/viewMoreOrder"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:contentDescription="@string/app_name"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_paquete" />
+
+
+        <View
+            android:id="@+id/viewSeparate"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="4dp"
+            android:layout_below="@+id/detailsOrder"
+            android:alpha="0.5"
+            android:background="@color/lightGrayColor" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

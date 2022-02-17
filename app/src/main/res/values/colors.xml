@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#f0302c</color>
+    <color name="purple_700">#f0302c</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="gray">#6C6868</color>
+    <color name="gray1">#8E8888</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="red">#f0302c</color>
+    <color name="redKfc">#db041c</color>
+    <color name="warningDark">#8a6d3b</color>
+    <color name="borde">#CCCAC7</color>
+    <color name="borde1">#EAE7E3</color>
+    <color name="warninglight">#fcf8e3</color>
+    <color name="warningborder">#faebcc</color>
+    <color name="warning">#ffc107</color>
+    <color name="colorEntregado">#63c2de</color>
+    <color name="colorPreparando">#4dbd74</color>
+    <color name="colorRechazdo">#f86c6b</color>
+    <color name="colorRegistra">#ffc107</color>
+    <color name="colorPrimaryVariant">@color/purple_700</color>
+
+    <color name="colorPrimary1">@color/colorPrimary</color>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="colorPrimaryVariant1">@color/purple_700</color>
+    <color name="customcolor">#F0F0F0</color>
+    <color name="titleGeneral">#C9D4D8C9</color>
+    <color name="colortextBlack">#000000</color>
+    <color name="colortextdark">#555555</color>
+
+    <color name="colorwhite">#ffffff</color>
+    <color name="colortextRed">#FF2600</color>
+    <color name="colorBlueTitle">#007AFF</color>
+    <color name="darkColor">#434343</color>
+    <color name="lightGrayColor">#635E5E</color>
+
+    <color name="colorpreparado">#F3EAD8</color>
+    <color name="colorrechazado">#F1E0DE</color>
+    <color name="colorrechazadoRest">#ECC1B9</color>
+    <color name="colorRegistrado">#D7E4F3</color>
+    <color name="colorRecibido">#DEF1DE</color>
+    <color name="colorseleccionado">#04C80C</color>
+
+
+</resources>

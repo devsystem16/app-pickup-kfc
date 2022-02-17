@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/titlefactura"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_vertical"
+        android:text="@string/titleFactura"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/background_dark"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        tools:ignore="RtlCompat" />
+
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+
+
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="60dp"
+        android:background="@color/borde" />
+
+    <TextView
+        android:id="@+id/titleCedula"
+        android:layout_below="@id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_vertical"
+        android:text="@string/titleCedula"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/background_dark"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        tools:ignore="RtlCompat" />
+
+    <TextView
+        android:id="@+id/lblCedula"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_below="@id/titleCedula"
+        android:layout_alignParentEnd="@id/titleCliente"
+        android:layout_marginStart="40dp"
+        android:text="TextView"
+        android:textColor="@android:color/background_dark"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/titleCliente"
+        android:layout_width="83dp"
+        android:layout_below="@id/lblCedula"
+
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_vertical"
+        android:text="@string/Cliente"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/background_dark"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        tools:ignore="RtlCompat" />
+
+    <TextView
+        android:id="@+id/lblCliente"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/titleCliente"
+        android:layout_alignParentEnd="@id/titleCliente"
+        android:layout_marginStart="40dp"
+        android:text="TextView"
+        android:textColor="@android:color/background_dark"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/titleDireccion"
+        android:layout_width="83dp"
+        android:layout_below="@id/lblCliente"
+
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_vertical"
+        android:text="@string/titleDireccion"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/background_dark"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        tools:ignore="RtlCompat" />
+
+    <TextView
+        android:id="@+id/lblDireccion"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/titleDireccion"
+        android:layout_alignParentEnd="@id/titleCliente"
+        android:layout_marginStart="40dp"
+        android:text="TextView"
+        android:textColor="@android:color/background_dark"
+        android:textSize="15sp" />
+
+
+    <TextView
+        android:id="@+id/titleTelefono"
+        android:layout_width="83dp"
+        android:layout_below="@id/lblDireccion"
+
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_vertical"
+        android:text="@string/titleTelefono"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/background_dark"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        tools:ignore="RtlCompat" />
+
+    <TextView
+        android:id="@+id/lblTelefono"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/titleTelefono"
+        android:layout_alignParentEnd="@id/titleCliente"
+        android:layout_marginStart="40dp"
+        android:text="TextView"
+        android:textColor="@android:color/background_dark"
+        android:textSize="15sp" />
+
+
+    <TextView
+        android:id="@+id/titleEmail"
+        android:layout_width="192dp"
+        android:layout_height="34dp"
+
+        android:layout_below="@id/lblTelefono"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_vertical"
+        android:text="@string/titleEmail"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/background_dark"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        tools:ignore="RtlCompat" />
+
+    <TextView
+        android:id="@+id/lblEmail"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/titleEmail"
+        android:layout_alignParentEnd="@id/titleCliente"
+        android:layout_marginStart="40dp"
+        android:text="TextView"
+        android:textColor="@android:color/background_dark"
+        android:textSize="15sp" />
+
+
+</RelativeLayout>

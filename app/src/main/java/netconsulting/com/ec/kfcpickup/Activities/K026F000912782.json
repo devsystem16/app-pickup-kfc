@@ -1,0 +1,93 @@
+{
+  "orden": {
+    "_id": "5f74f05d433100006d001042",
+    "state": "recibido-restaurante",
+    "stateMessage": "Procesando en el restaurante",
+    "stateTechnicalMessage": "Procesando en el restaurante",
+    "codigo_app": "0000000826-010111",
+    "request": {
+      "servicio_pickup": "PickUp-LLevar",
+      "tipo_pickup": "ASAP",
+      "fecha_hora_pickup": "2020-09-30 16:09:48",
+      "cdn_id": 10,
+      "rst_id": 162,
+      "IDTipoDocumento": "030B9503-85CF-E511-80C6-000D3A3261F3",
+      "cli_documento": "1713254819",
+      "cli_nombres": "Carlos Suntaxi",
+      "cli_telefono": "0984664654",
+      "cli_direccion": "Ca\u00f1aris 2 y panzaleo",
+      "cli_email": "carlossun_26@hotmail.com",
+      "cfac_subtotal": 22.7589,
+      "cfac_iva": 2.7311,
+      "cfac_total": 25.49,
+      "tipo_pago": "tarjeta",
+      "comentario_general": null,
+      "detalles": [
+        {
+          "plu_id": 30511,
+          "dop_cantidad": 1,
+          "comentario": "Original",
+          "modificadores": [
+            {
+              "plu_id": 33617,
+              "dop_cantidad": 1
+            },
+            {
+              "plu_id": 296,
+              "dop_cantidad": 1
+            }
+          ]
+        }
+      ],
+      "formaspago": [
+        {
+          "bin": 445446,
+          "fpf_total_pagar": 25.49
+        }
+      ],
+      "autorizaciones": [
+        {
+          "Autorizacion": "774605",
+          "MensajeRespuestaAut": "APPROVED",
+          "NumeroTarjeta": "4049",
+          "TarjetaHabiente": "Carlos Suntaxi",
+          "FechaTransaccion": "20200930",
+          "HoraTransaccion": "125351",
+          "TipoTarjeta": "visa",
+          "IDFormaPago": "DA0A9503-85CF-E511-80C6-000D3A3261F3",
+          "PasarelaPago": "PAYPHONE"
+        }
+      ],
+      "codigo_app": "0000000826-010111"
+    },
+    "updated_at": "2020-09-30T20:53:50.801000Z",
+    "created_at": "2020-09-30T20:53:49.645000Z",
+    "responseData": {
+      "estado": "OK",
+      "codigo": "200",
+      "msg": "Pedido Pick Up Recibido",
+      "data": {
+        "idConciliation": "5f74f05d433100006d001042",
+        "cabeceraCreada": 5644,
+        "fecha_hora_pickup": "2020-09-30 16:09:48",
+        "id_transaccion": "K026F000912782"
+      },
+      "error": []
+    },
+    "clase_css_estado": "warning"
+  },
+  "plus": [
+    {
+      "plu_id": 296,
+      "plu_descripcion": "ENSALADA DE COL GR."
+    },
+    {
+      "plu_id": 30511,
+      "plu_descripcion": "MEGA FESTIN 12 PRE 2 A\/M 1 PAPA FGR ENS COL GR"
+    },
+    {
+      "plu_id": 33617,
+      "plu_descripcion": "Mitad Original\/Crispy"
+    }
+  ]
+}

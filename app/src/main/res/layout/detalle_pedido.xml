@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:weightSum="4">
+
+
+        <TextView
+            android:id="@+id/plu_valor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/plu_valor"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            android:layout_weight="1"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/modif_valor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/modif_valor"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            android:layout_weight="1"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/nombre_valor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/nombre_valor"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/cantidad_valor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/cantidad_valor"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+</RelativeLayout>

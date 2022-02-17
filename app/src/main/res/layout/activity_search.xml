@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:theme="@style/Theme.AppTheme"
+    tools:context=".Activities.SearchActivity">
+
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:weightSum="3"
+        tools:context=".Activities.SearchActivity">
+
+        <RelativeLayout
+            android:id="@+id/cabeSearch"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:layout_weight="1"
+            android:background="@color/white">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCliente"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/boton_redondo_2"
+                android:text="@string/search_cliente"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                app:icon="@drawable/ic_user_check"
+                app:iconGravity="textStart" />
+
+            <Button
+                android:id="@+id/btnSearch"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/boton_redondo_1"
+                android:text="@string/search"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:icon="@drawable/ic_check_square"
+                app:iconGravity="textStart"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEstado"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/boton_redondo_3"
+                android:text="@string/search_estado"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                app:icon="@drawable/ic_check_square"
+                app:iconGravity="textStart" />
+
+
+            <LinearLayout
+                android:id="@+id/separate1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/btnCliente"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginBottom="2dp"
+                android:background="@color/purple_500"
+                android:orientation="vertical" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+
+            android:id="@+id/cabeMidlee"
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:visibility="visible">
+
+
+            <LinearLayout
+                android:id="@+id/cliente"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                android:baselineAligned="false"
+                android:weightSum="3">
+
+
+                <RelativeLayout
+                    android:id="@+id/cliente_uno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:visibility="gone">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/idCliente"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="@string/clienteid"
+                        android:textColor="@color/gray"
+                        android:textSize="20sp" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/nameCliente"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/idCliente"
+                        android:layout_margin="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/cliente_dos"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/choose_op"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/titlebusqueda"
+                        android:textColor="@color/colortextRed"
+                        android:textSize="35sp"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/idCardCliente"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="@string/identificacioC"
+                        android:textColor="@color/gray"
+                        android:textSize="20sp"
+                        android:visibility="gone" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/nameCardCliente"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/idCardCliente"
+                        android:layout_margin="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:visibility="gone" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/cliente_tres"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:visibility="gone">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/idCodigoApp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="@string/codigoApp"
+                        android:textColor="@color/gray"
+                        android:textSize="20sp" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/nameCodigoApp"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/idCodigoApp"
+                        android:layout_margin="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/estado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="6">
+
+                <RelativeLayout
+                    android:id="@+id/estado_cero"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorEntregado"
+                    android:layout_weight="1"
+                    android:visibility="visible">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/nombreE0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="@string/estado0"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="20sp" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/idE0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"
+                        android:gravity="center"
+                        android:scaleY="1.5"
+                        android:scaleX="1.5"
+                        android:checked="false"
+                        android:theme="@style/SCBSwitch" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/estado_uno"
+                    android:background="@color/colorPreparando"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:visibility="visible">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/nombreE1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="@string/estado1"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/idE1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"
+                        android:gravity="center"
+
+                        android:scaleY="1.5"
+                        android:scaleX="1.5"
+                        android:checked="false"
+                        android:theme="@style/SCBSwitch" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/estado_dos"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorRechazdo"
+                    android:layout_weight="1"
+                    android:visibility="visible">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/nombreE2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="@string/estado2"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="20sp" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/idE2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"
+                        android:gravity="center"
+                        android:scaleY="1.5"
+                        android:scaleX="1.5"
+                        android:checked="false"
+                        android:theme="@style/SCBSwitch" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/estado_tres"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorRechazdo"
+                    android:layout_weight="1"
+                    android:visibility="visible">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/nombreE3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="@string/estado3"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="20sp" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/idE3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"
+                        android:gravity="center"
+                        android:scaleY="1.5"
+                        android:scaleX="1.5"
+                        android:checked="false"
+                        android:theme="@style/SCBSwitch" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/estado_cuatro"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorRegistra"
+                    android:layout_weight="1"
+                    android:visibility="visible">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/nombreE4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="@string/estado4"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="20sp" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/idE4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"
+                        android:gravity="center"
+                        android:scaleY="1.5"
+                        android:scaleX="1.5"
+                        android:checked="false"
+                        android:theme="@style/SCBSwitch" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/estado_cinco"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorRegistra"
+                    android:layout_weight="1"
+                    android:visibility="visible">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/nombreE5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="@string/estado5"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="20sp" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/idE5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"
+                        android:gravity="center"
+                        android:scaleY="1.5"
+                        android:scaleX="1.5"
+                        android:background="@color/colorRegistra"
+                        android:checked="false"
+                        android:theme="@style/SCBSwitch" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/cabeBottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:visibility="visible"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/titleItems"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/titleGeneral"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/varities"
+                android:textColor="@color/colortextBlack"
+                android:textSize="20sp"
+                android:visibility="gone"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/resultSearch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/titleItems"
+                android:visibility="visible"
+                android:background="@color/white" />
+
+            <ImageView
+                android:id="@+id/ImgNotify"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/app_name"
+                android:foregroundGravity="center_horizontal|center_vertical"
+                android:background="@drawable/notificaciones" />
+
+            <TextView
+                android:id="@+id/NoOrderLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ImgNotify"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:text="@string/noChooseSearch"
+                android:textColor="@color/colortextdark"
+                android:textSize="15sp" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        android:indeterminateTint="@color/colortextRed"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

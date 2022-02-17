@@ -1,0 +1,1480 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:theme="@style/Theme.AppTheme"
+    tools:context=".Activities.ReporteAActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:weightSum="3"
+            tools:context=".Activities.LeerQr">
+
+            <RelativeLayout
+                android:id="@+id/cabeSearch"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:id="@+id/btnCab"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    android:weightSum="2"
+                    android:baselineAligned="false">
+
+                    <RelativeLayout
+                        android:id="@+id/btnuno"
+                        android:background="@color/colorwhite"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:visibility="visible">
+
+                        <Button
+                            android:id="@+id/btnCliente"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:background="@color/gray"
+                            android:text="@string/search_cliente"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/btndos"
+                        android:background="@color/colorwhite"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:visibility="visible">
+
+                        <Button
+                            android:id="@+id/btnEstado"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:text="@string/search_estado"
+                            android:textSize="20sp"
+                            android:textColor="@color/white"
+                            android:background="@color/gray1" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/separate1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/btnCab"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:background="@color/purple_500"
+                    android:orientation="vertical" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+
+                android:id="@+id/cabeMidlee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:visibility="gone">
+
+
+                <LinearLayout
+                    android:id="@+id/estado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    android:weightSum="2">
+
+
+                    <RelativeLayout
+                        android:id="@+id/estado_uno"
+                        android:background="@color/colorpreparado"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:visibility="visible">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/nombreE1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:text="@string/error1"
+                            android:textStyle="bold"
+                            android:textColor="@color/colortextRed"
+                            android:textSize="20sp" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/estado_dos"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorpreparado"
+                        android:layout_weight="1"
+                        android:visibility="visible">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/nombreE2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:text="@string/error"
+                            android:textColor="@color/colortextRed"
+                            android:textStyle="bold"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/cabeBottom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:visibility="visible"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/titleItems"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@color/black"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="@string/pedido"
+                    android:textColor="@color/colorwhite"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+                    android:id="@+id/detallePedido3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_below="@+id/titleItems"
+                    android:visibility="visible"
+                    android:weightSum="2">
+
+
+                    <LinearLayout
+                        android:id="@+id/detallePedido3_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="visible"
+                        android:weightSum="2">
+
+                        <RelativeLayout
+                            android:id="@+id/detallePedido1_12"
+                            android:background="@color/colorwhite"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:visibility="visible">
+
+
+                            <TableLayout
+                                android:id="@+id/tabla1"
+                                android:layout_width="fill_parent"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_height="wrap_content"
+                                android:shrinkColumns="*"
+                                android:stretchColumns="*"
+                                android:background="@drawable/bordertable">
+
+                                <TableRow
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="10dp">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:gravity="start"
+                                        android:text="@string/dataP"
+                                        android:layout_span="2"
+                                        android:textSize="20sp"
+                                        android:layout_marginStart="5dp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+
+                                </TableRow>
+
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:gravity="start"
+                                        android:layout_width="wrap_content"
+                                        android:text="@string/restaurante"
+                                        android:textSize="15sp"
+                                        android:layout_marginStart="20dp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/codigoRest_P"
+                                        android:gravity="start"
+                                        android:text="@string/codigoRest_P"
+                                        android:textSize="15sp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+
+                                </TableRow>
+
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:gravity="start"
+                                        android:layout_width="wrap_content"
+                                        android:text="@string/tipoServicio"
+                                        android:textSize="15sp"
+                                        android:layout_marginStart="20dp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/tipoServicio_P"
+                                        android:gravity="start"
+                                        android:text="@string/tipoServicio_P"
+                                        android:textSize="15sp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+
+                                        android:gravity="start"
+                                        android:layout_width="wrap_content"
+                                        android:text="@string/tipoPickUp"
+                                        android:textSize="15sp"
+                                        android:layout_marginStart="20dp"
+                                        android:layout_marginBottom="20dp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/tipoPickUp"
+                                        android:gravity="start"
+                                        android:text="@string/tipoPickUp_P"
+                                        android:textSize="15sp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+
+                                </TableRow>
+
+
+                            </TableLayout>
+
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/detallePedido1_11"
+                            android:background="@color/colorwhite"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:visibility="visible">
+
+                            <!-- CELDA 2 -->
+
+                            <TableLayout
+                                android:id="@+id/tabla2"
+                                android:layout_width="fill_parent"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_height="match_parent"
+                                android:shrinkColumns="*"
+                                android:stretchColumns="*"
+                                android:background="@drawable/bordertable">
+
+                                <TableRow
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="10dp">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:gravity="start"
+                                        android:text="@string/detalleP"
+                                        android:layout_span="2"
+                                        android:textSize="20sp"
+                                        android:layout_marginStart="5dp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+
+                                </TableRow>
+
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+
+                                    <TextView
+                                        android:gravity="start"
+                                        android:text="@string/pluDetalle"
+                                        android:textSize="15sp"
+                                        android:layout_marginStart="20dp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/modifDetalle"
+                                        android:gravity="start"
+                                        android:text="@string/modifDetalle"
+                                        android:textSize="15sp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/nombreDetalle"
+                                        android:gravity="start"
+                                        android:text="@string/nombreDetalle"
+                                        android:textSize="15sp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/cantidadDetalle"
+                                        android:gravity="start"
+                                        android:text="@string/cantidadDetalle"
+                                        android:textSize="15sp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <androidx.recyclerview.widget.RecyclerView
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginEnd="5dp"
+                                        android:layout_marginBottom="5dp"
+                                        android:id="@+id/idDetallePedidoC"
+                                        android:layout_span="4"
+                                        android:visibility="visible"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:scrollbars="vertical"
+                                        android:background="@color/white" />
+                                </TableRow>
+
+                            </TableLayout>
+                            <!-- CELDA 2  CIERRE-->
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/detallePedido1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:visibility="visible"
+                        android:weightSum="2">
+
+                        <RelativeLayout
+                            android:id="@+id/detallePedido1_13"
+                            android:background="@color/colorwhite"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:visibility="visible">
+
+                            <!--CELDA 3 -->
+
+                            <TableLayout
+                                android:id="@+id/tabla3"
+                                android:layout_width="fill_parent"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_height="wrap_content"
+                                android:shrinkColumns="*"
+                                android:stretchColumns="*"
+                                android:background="@drawable/bordertable">
+
+                                <TableRow
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="10dp">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:gravity="start"
+                                        android:text="@string/dataCP"
+                                        android:layout_span="2"
+                                        android:textSize="20sp"
+                                        android:layout_marginStart="5dp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:gravity="start"
+                                        android:layout_width="wrap_content"
+                                        android:text="@string/nombreCP"
+                                        android:textSize="15sp"
+                                        android:layout_marginStart="20dp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/nombreCPE"
+                                        android:gravity="start"
+                                        android:text="@string/nombreCPE"
+                                        android:textSize="15sp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+
+                                </TableRow>
+
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:gravity="start"
+                                        android:layout_width="wrap_content"
+                                        android:text="@string/direccionCP"
+                                        android:textSize="15sp"
+                                        android:layout_marginStart="20dp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/direccionCPE"
+                                        android:gravity="start"
+                                        android:text="@string/direccionCPE"
+                                        android:textSize="15sp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+
+                                </TableRow>
+
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:gravity="start"
+                                        android:layout_width="wrap_content"
+                                        android:text="@string/emailCP"
+                                        android:textSize="15sp"
+                                        android:layout_marginStart="20dp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/emailCPE"
+                                        android:gravity="start"
+                                        android:text="@string/emailCPE"
+                                        android:textSize="15sp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:gravity="start"
+                                        android:layout_width="wrap_content"
+                                        android:text="@string/cellCP"
+                                        android:textSize="15sp"
+                                        android:layout_marginStart="20dp"
+                                        android:layout_marginBottom="20dp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/cellCPE"
+                                        android:gravity="start"
+                                        android:text="@string/cellCPE"
+                                        android:textSize="15sp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+
+                                </TableRow>
+
+
+                            </TableLayout>
+
+                            <!-- CELDA 3 CIERRE -->
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/detallePedido1_14"
+                            android:background="@color/colorwhite"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:visibility="visible">
+
+
+                            <!-- CELDA 4 -->
+
+                            <TableLayout
+                                android:id="@+id/tabla4"
+                                android:layout_width="fill_parent"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_height="wrap_content"
+                                android:shrinkColumns="*"
+                                android:stretchColumns="*"
+                                android:background="@drawable/bordertable">
+
+                                <TableRow
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="10dp">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:gravity="start"
+                                        android:text="@string/pagoP"
+                                        android:layout_span="2"
+                                        android:textSize="20sp"
+                                        android:layout_marginStart="5dp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:gravity="start"
+                                        android:layout_width="wrap_content"
+                                        android:text="@string/pagoV"
+                                        android:textSize="15sp"
+                                        android:layout_marginStart="20dp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/pagoVE"
+                                        android:gravity="start"
+                                        android:text="@string/pagoVE"
+                                        android:textSize="15sp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+
+                                </TableRow>
+
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:gravity="start"
+                                        android:layout_width="wrap_content"
+                                        android:text="@string/binV"
+                                        android:textSize="15sp"
+                                        android:layout_marginStart="20dp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/binVE"
+                                        android:gravity="start"
+                                        android:text="@string/binVE"
+                                        android:textSize="15sp"
+                                        android:textColor="@color/black"
+                                        android:layout_marginBottom="20dp"
+                                        android:textStyle="bold" />
+
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:gravity="start"
+                                        android:layout_width="wrap_content"
+                                        android:textSize="15sp"
+                                        android:layout_marginStart="20dp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:gravity="start"
+                                        android:textSize="15sp"
+                                        android:textColor="@color/black"
+                                        android:layout_marginBottom="20dp"
+                                        android:textStyle="bold" />
+
+                                </TableRow>
+
+
+                            </TableLayout>
+
+                            <!-- CELDA 4 -->
+
+
+                            <!-- CELDA 4 -->
+
+
+                            <!-- CELDA 4 -->
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <TableLayout
+                android:id="@+id/tabla5"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/bordertable"
+                android:shrinkColumns="*"
+                android:stretchColumns="*"
+                android:visibility="visible">
+
+                <TableRow
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:layout_span="2"
+                        android:gravity="start"
+                        android:text="@string/acctP"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:gravity="start"
+                        android:text="@string/codigoP"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/codigo_p_respuesta"
+                        android:gravity="start"
+                        android:text="@string/codigo_p_respuesta"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:gravity="start"
+                        android:text="@string/mensajeP"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/mensaje_p_respuesta"
+                        android:gravity="start"
+                        android:text="@string/mensaje_p_respuesta"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:gravity="start"
+                        android:text="@string/tarjetaHP"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tarjetah_p_respuesta"
+                        android:gravity="start"
+                        android:text="@string/tarjetah_p_respuesta"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:gravity="start"
+                        android:text="@string/tipoTP"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tipotarjeta_p_respuesta"
+                        android:gravity="start"
+                        android:text="@string/tipotarjeta_p_respuesta"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:gravity="start"
+                        android:text="@string/pasarelaP"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/pasarela_p_respuesta"
+                        android:gravity="start"
+                        android:text="@string/pasarela_p_respuesta"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="start"
+                        android:text="@string/FechaP"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/fechahora_p_respuesta"
+                        android:gravity="start"
+                        android:text="@string/fechahora_p_respuesta"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </TableRow>
+
+            </TableLayout>
+
+            <RelativeLayout
+
+                android:id="@+id/cabeMidlee1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colortextRed"
+                android:visibility="gone">
+
+
+                <LinearLayout
+                    android:id="@+id/estado1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    android:weightSum="2">
+
+
+                    <RelativeLayout
+                        android:id="@+id/estado_uno_uno"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:visibility="visible">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/nombreE1_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:text="@string/factura"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/nombreE1_11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_toEndOf="@+id/nombreE1_1"
+                            android:text="@string/numero_id_factura"
+                            android:textStyle="normal"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/estado_dos_dos"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:visibility="visible">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/nombreE2_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:text="@string/hora_pickup"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:textSize="20sp" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/nombreE2_22"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_toEndOf="@+id/nombreE2_2"
+                            android:text="@string/hora_id_pickup"
+                            android:textStyle="normal"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/cabeBottom_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:visibility="visible">
+
+
+                <LinearLayout
+                    android:id="@+id/detallefactura"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    android:weightSum="2">
+
+
+                    <LinearLayout
+                        android:id="@+id/detalleFactura3_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="visible"
+                        android:weightSum="2">
+
+                        <RelativeLayout
+                            android:id="@+id/detalleFactura1_12"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@color/colorwhite"
+                            android:visibility="visible">
+
+
+                            <TableLayout
+                                android:id="@+id/tabla1_1"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:background="@drawable/bordertable"
+                                android:shrinkColumns="*"
+                                android:stretchColumns="*">
+
+                                <TableRow
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="10dp">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_marginStart="5dp"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_span="2"
+                                        android:gravity="start"
+                                        android:text="@string/facturaP"
+                                        android:textColor="@color/black"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+                                    <ImageView
+                                        android:id="@+id/imgPF"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:src="@drawable/ic_baseline_local_printshop_24" />
+
+
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_marginStart="20dp"
+                                        android:gravity="start"
+                                        android:text="@string/FechaFac"
+                                        android:textColor="@color/black"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/fecha_impresion_p"
+                                        android:gravity="start"
+                                        android:text="@string/fecha_impresion_p"
+                                        android:textColor="@color/black"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold" />
+
+                                </TableRow>
+
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_marginStart="20dp"
+                                        android:gravity="start"
+                                        android:text="@string/EstacionFac"
+                                        android:textColor="@color/black"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/estacion_factura_p"
+                                        android:gravity="start"
+                                        android:text="@string/estacion_factura_p"
+                                        android:textColor="@color/black"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold" />
+
+                                </TableRow>
+
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_marginStart="20dp"
+                                        android:gravity="start"
+                                        android:text="@string/EstadoFac"
+                                        android:textColor="@color/black"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/estado_factura_p"
+                                        android:gravity="start"
+                                        android:text="@string/estado_factura_p"
+                                        android:textColor="@color/black"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold" />
+
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_marginStart="20dp"
+                                        android:layout_marginBottom="20dp"
+                                        android:gravity="start"
+                                        android:text="@string/ImpresoraFac"
+                                        android:textColor="@color/black"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/impresora_factura_p"
+                                        android:gravity="start"
+                                        android:text="@string/impresora_factura_p"
+                                        android:textColor="@color/black"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold" />
+
+                                </TableRow>
+
+
+                            </TableLayout>
+
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/detalleFactura1_11"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/colorwhite"
+                            android:visibility="visible">
+
+                            <!-- CELDA 2 -->
+
+                            <TableLayout
+                                android:id="@+id/tabla2_2"
+                                android:layout_width="fill_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:background="@drawable/bordertable"
+                                android:shrinkColumns="*"
+                                android:stretchColumns="*">
+
+                                <TableRow
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="10dp">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_marginStart="5dp"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_span="1"
+                                        android:gravity="start"
+                                        android:text="@string/FacturaDP"
+                                        android:textColor="@color/black"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+                                    <ImageView
+                                        android:id="@+id/imgOF"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:src="@drawable/ic_baseline_local_printshop_24" />
+
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_marginStart="20dp"
+                                        android:gravity="start"
+                                        android:text="@string/FechaOrden"
+                                        android:textColor="@color/black"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/fecha_orden_p"
+                                        android:gravity="start"
+                                        android:text="@string/fecha_orden_p"
+                                        android:textColor="@color/black"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold" />
+
+                                </TableRow>
+
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_marginStart="20dp"
+                                        android:gravity="start"
+                                        android:text="@string/EstacionOrden"
+                                        android:textColor="@color/black"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/estacion_orden_p"
+                                        android:gravity="start"
+                                        android:text="@string/estacion_orden_p"
+                                        android:textColor="@color/black"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold" />
+
+                                </TableRow>
+
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_marginStart="20dp"
+                                        android:gravity="start"
+                                        android:text="@string/EstadoOrden"
+                                        android:textColor="@color/black"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/estado_orden_p"
+                                        android:gravity="start"
+                                        android:text="@string/estado_orden_p"
+                                        android:textColor="@color/black"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold" />
+
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_marginStart="20dp"
+                                        android:layout_marginBottom="20dp"
+                                        android:gravity="start"
+                                        android:text="@string/ImpresoraOrden"
+                                        android:textColor="@color/black"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/impresora_orden_p"
+                                        android:gravity="start"
+                                        android:text="@string/impresora_orden_p"
+                                        android:textColor="@color/black"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold" />
+                                </TableRow>
+
+
+                            </TableLayout>
+
+                            <!-- CELDA 2  CIERRE-->
+
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/detalleFactura1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:visibility="visible"
+                        android:weightSum="1">
+
+
+                        <RelativeLayout
+                            android:id="@+id/detalleFactura1_14"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@color/colorwhite"
+                            android:visibility="visible">
+
+
+                            <!-- CELDA 4 -->
+
+                            <TableLayout
+                                android:id="@+id/tabla4_1"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:background="@drawable/bordertable"
+                                android:shrinkColumns="*"
+                                android:stretchColumns="*">
+
+                                <TableRow
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="10dp">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_marginStart="5dp"
+                                        android:layout_span="1"
+                                        android:gravity="start"
+                                        android:text="@string/ordenSP"
+                                        android:textColor="@color/black"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+                                </TableRow>
+
+
+                            </TableLayout>
+
+                            <!-- CELDA 4 -->
+
+
+                            <!-- CELDA 4 -->
+
+                            <TableLayout
+                                android:id="@+id/tabla5_1"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tabla4_1"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:background="@drawable/bordertable"
+                                android:shrinkColumns="*"
+                                android:stretchColumns="*">
+
+                                <TableRow
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="10dp">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_marginStart="5dp"
+                                        android:layout_span="1"
+                                        android:gravity="start"
+                                        android:text="@string/FacturaG"
+                                        android:textColor="@color/black"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+                                </TableRow>
+
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:background="@color/colortextRed"
+                                        android:layout_alignParentStart="true"
+                                        android:text="@string/noSeEncontroFac"
+                                        android:id="@+id/noSeEncontroFac"
+                                        android:textColor="@color/white"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:id="@+id/numFac"
+                                        android:gravity="start"
+                                        android:layout_marginStart="20dp"
+                                        android:text="@string/numFac"
+                                        android:textSize="15sp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/numSubTotal"
+                                        android:gravity="start"
+                                        android:text="@string/numSub"
+                                        android:textSize="15sp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/numIva"
+                                        android:gravity="start"
+                                        android:text="@string/numIva"
+                                        android:textSize="15sp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/numTotal"
+                                        android:gravity="start"
+                                        android:text="@string/numTotal"
+                                        android:textSize="15sp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+
+                                    >
+
+                                    <TextView
+                                        android:id="@+id/numFac1"
+                                        android:gravity="start"
+                                        android:layout_marginStart="20dp"
+                                        android:text="@string/numFac"
+                                        android:textSize="15sp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/numSubTotal1"
+                                        android:gravity="start"
+                                        android:text="@string/numSub"
+                                        android:textSize="15sp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/numIva1"
+                                        android:gravity="start"
+                                        android:text="@string/numIva"
+                                        android:textSize="15sp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/numTotal1"
+                                        android:gravity="start"
+                                        android:text="@string/numTotal"
+                                        android:textSize="15sp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+
+                                </TableRow>
+
+
+                            </TableLayout>
+
+                            <!-- CELDA 4 -->
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
